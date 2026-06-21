@@ -17,6 +17,8 @@ Repository: https://github.com/GodwhiteTaiwan/homework
 
 GitHub Pages workflow: [.github/workflows/deploy-web.yml](.github/workflows/deploy-web.yml)
 
+如果你的 GitHub Pages 還沒啟用，請在 Repository Secrets 設定 `PAGES_TOKEN`，並提供一個有 `repo` 或 Pages write 權限的 PAT，workflow 會自動幫你啟用 Pages。
+
 ## 功能
 
 - 可記錄誰欠誰、金額與備註
@@ -39,6 +41,7 @@ GitHub Pages workflow: [.github/workflows/deploy-web.yml](.github/workflows/depl
 - 產物輸出：`apps/web/dist`
 - GitHub Pages 會部署這個靜態資料夾
 - 因為這個專案前端仍需要 API，GitHub Pages 上要另外設定 `VITE_API_BASE_URL` 指向後端服務網址
+- 如果 Pages 還沒開啟，請額外設定 `PAGES_TOKEN` secret 讓 workflow 自動啟用 Pages
 
 ## 結構
 

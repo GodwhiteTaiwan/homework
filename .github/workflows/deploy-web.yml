@@ -40,7 +40,10 @@ jobs:
         run: npm run build --workspace @homework/web
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
+        with:
+          token: ${{ secrets.PAGES_TOKEN || github.token }}
+          enablement: ${{ secrets.PAGES_TOKEN != '' }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
